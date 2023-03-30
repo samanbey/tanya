@@ -16,5 +16,5 @@ Cserébe ami van:
 
 ## Blog
 {% for post in site.posts %}
-- [{{ post.title }}](/tanya{{ post.url }})
+ - [{{ post.title }}](/tanya{{ post.url }})
 {% endfor %}
