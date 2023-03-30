@@ -1,6 +1,5 @@
 ---
 title: "2021-05-02 – A ciszterna"
-description: Készítettünk egy ciszternát - innentõl kezdve legalább "ipari felhasználásra" lesz víz.
 ---
 
 # A ciszterna

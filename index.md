@@ -4,17 +4,13 @@ title: "Gede-tanya"
 # Gede-tanya
 ![A tanyaház képe](/img/tanya.jpg)
 Van egy tanyánk Kaposvár közelében, a Zselicben. 
+Erősen el van hanyagolva, de elhatároztuk, hogy szépen lassan rendbe tesszük.
 
-Ami nincs:
-- villany
-- víz
-
-Cserébe ami van:
-- csillagos ég, Tejút
-- vadvilág
-- csend, nyugalom
+Itt igyekszem dokumentálni, hogy mikor mit csináltunk.
 
 ## Blog
 {% for post in site.posts %}
  - [{{ post.title }}](/tanya{{ post.url }})
 {% endfor %}
+
+Itt a vége
