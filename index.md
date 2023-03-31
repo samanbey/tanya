@@ -31,11 +31,7 @@ Töröcske, forduló buszmegállótól a piros sáv jelzésen kb. 1,35 km
 {% endfor %}
 
 ### debug
-{% for image in site.static_files %}
-{% if image.path contains 'img/' %}
-<a href="{{ site.baseurl }}{{ image.path }}"><img src="https://images.weserv.nl/?url={{ site.url }}{{ site.baseurl }}{{ image.path }}&w=256&h=256&output=jpg&q=50" /></a> 
-{% endif %}
-{% endfor %}
+<style> img.tanyathumb { width: 19%; } </style>
+{% for image in site.static_files %}{% if image.path contains 'img/' %}<a href="{{ site.baseurl }}{{ image.path }}"><img class="tanyathumb" src="https://images.weserv.nl/?url={{ site.url }}{{ site.baseurl }}{{ image.path }}&w=256&h=256&output=jpg&q=50" /></a> {% endif %}{% endfor %}
 
-{{ site.url }}
-{{ site.baseurl }}
+
