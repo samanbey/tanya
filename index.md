@@ -13,3 +13,5 @@ Itt igyekszem dokumentálni, hogy mikor mit csináltunk.
  - [{{ post.title }}](/tanya{{ post.url }})
 {% endfor %}
 
+## 3D modell
+- [Egy kezdetleges modell KMZ-ben](/3d/Tanya.kmz)
