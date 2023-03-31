@@ -13,4 +13,3 @@ Itt igyekszem dokumentálni, hogy mikor mit csináltunk.
  - [{{ post.title }}](/tanya{{ post.url }})
 {% endfor %}
 
-Itt a vége
