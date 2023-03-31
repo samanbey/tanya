@@ -13,7 +13,7 @@ Ez lesz a teteje:
 ![Deszkázat](/tanya/img/cisz_1_2.jpg)
 
 Itt már ki van bélelve, és bele van vezetve az ereszcsatorna lefolyója:
-![Bélelt gödör a csővel](/tanya/img/cisz_1_1.jpg)
+![Bélelt gödör a csővel](/tanya/img/cisz_1_3.jpg)
 
 És ilyen lett lefedve:
-![Ciszterna frissen lefedve](/tanya/img/cisz_1_1.jpg)
+![Ciszterna frissen lefedve](/tanya/img/cisz_1_4.jpg)
