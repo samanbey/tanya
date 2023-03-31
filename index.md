@@ -16,13 +16,16 @@ Itt igyekszem dokumentálni, hogy mikor mit csináltunk.
 ## 3D modell
 - [Egy kezdetleges modell KMZ-ben](/3d/Tanya.kmz)
 
+## Megközelítés
+Töröcske, forduló buszmegállótól a piros sáv jelzésen kb. 1,35 km
+
 ## Térkép
 
 <iframe src="map"></iframe>
 
 ## Képek
 {% for image in site.static_files %}
-    {% if image.path contains 'img/' %}
-        - [{{image.name}}]({{ site.baseurl }}{{ image.path }})
-    {% endif %}
+{% if image.path contains 'img/' %}
+ - [{{image.name}}]({{ site.baseurl }}{{ image.path }})
+{% endif %}
 {% endfor %}
