@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Gede-tanya térkép</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen@latest/Control.FullScreen.css" />
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet.fullscreen@latest/Control.FullScreen.js"></script>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            #map_div {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map_div"></div>
+
+        <script>
+            // create map object
+            const map = L.map('map_div',{maxZoom: 20}).fitBounds([[46.3015, 17.7654], [46.3075, 17.7860]]);
+            
+            // add OSM tile layer
+            const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            // add OTM tile layer
+            const otm = L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            })//.addTo(map);
+            // add OSM.HU TT tile layer
+            const osmtt = L.tileLayer('https://{s}.tile.openstreetmap.hu/tt/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            
+            L.control.layers({'OpenStreetMap':osm,'OpenTopoMap':otm},{'Turistajelzések':osmtt}).addTo(map);
+            L.control.fullscreen().addTo(map);
+                        
+            var tanyaLayer;
+            fetch('tanya.geojson').then(r => r.json()).then(d => {
+                tanyaLayer=L.geoJSON(d,{ style: tanyaStyle }).bindTooltip(tooltips, {sticky: true}).addTo(map);
+                //map.fitBounds(tanyaLayer.getBounds());
+            });
+            
+            const styles={
+                telek: {
+                    color: 'brown',
+                    fill: false
+                },
+                epulet: {
+                    color: 'black',
+                    fillColor: 'orange'
+                }
+            }
+            function tanyaStyle(f) {
+                let c=f.properties.class;
+                return styles[c];
+            }
+            
+            function tooltips(l) {
+                return l.feature.properties.name;
+            }
+        </script>
+    </body>
+</html>

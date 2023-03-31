@@ -16,9 +16,13 @@ Itt igyekszem dokumentálni, hogy mikor mit csináltunk.
 ## 3D modell
 - [Egy kezdetleges modell KMZ-ben](/3d/Tanya.kmz)
 
+## Térkép
+
+<iframe src="map"></iframe>
+
 ## Képek
 {% for image in site.static_files %}
     {% if image.path contains 'img/' %}
-        -[{{image.name}}]({{ site.baseurl }}{{ image.path }})
+        - [{{image.name}}]({{ site.baseurl }}{{ image.path }})
     {% endif %}
 {% endfor %}
