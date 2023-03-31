@@ -15,3 +15,10 @@ Itt igyekszem dokumentálni, hogy mikor mit csináltunk.
 
 ## 3D modell
 - [Egy kezdetleges modell KMZ-ben](/3d/Tanya.kmz)
+
+## Képek
+{% for image in site.static_files %}
+    {% if image.path contains 'img/' %}
+        -[{{image.name}}]({{ site.baseurl }}{{ image.path }})
+    {% endif %}
+{% endfor %}
