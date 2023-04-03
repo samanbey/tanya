@@ -44,6 +44,12 @@
             var tanyaLayer;
             fetch('tanya.geojson').then(r => r.json()).then(d => {
                 tanyaLayer=L.geoJSON(d,{ style: tanyaStyle }).bindTooltip(tooltips, {sticky: true}).addTo(map);
+                let l=tanyaLayer.getLayers();
+                for (let i in l) 
+                    if (l[i].feature.properties.name=="Gede-tanya") {
+                        l[i].bindPopup("Gede-tanya").openPopup();
+                        break;
+                    }
                 //map.fitBounds(tanyaLayer.getBounds());
             });
             

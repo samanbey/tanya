@@ -7,6 +7,15 @@
 
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <style>
+        body {
+            background-image: url({{ site.baseurl }}/_img/bg_h_strip.jpg);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: contain;
+        }    
+    </style>
     {% include head-custom.html %}
   </head>
   <body>
