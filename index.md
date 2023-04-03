@@ -13,10 +13,10 @@ Itt igyekszem dokumentálni, hogy mikor mit csináltunk.
 {% endfor %}
 
 ## Megközelítés
-Töröcske, forduló buszmegállótól a piros sáv jelzésen kb. 1,35 km
+Töröcske, forduló buszmegállótól a piros sáv jelzésen kb. 1,35 km. Az út a Zselic egyik leglátványosabb horhóján (löszmélyútján) át vezet.
 
 ## Térkép
-<iframe src="map"></iframe>
+<iframe src="map" style="width: 100%"></iframe>
 
 ## Képek
 <style> img.tanyathumb { width: 19%; } </style>
