@@ -27,7 +27,37 @@ img.tanyathumb { width: 19%; cursor: pointer; }
 .prevbutton { left: 10%; } .nextbutton { right: 10%; }
 </style>
 <div class="imdisplay" tabindex="0" onclick="this.style.display=''"><span class="prevbutton" onclick="showprev()">◄</span><span class="nextbutton" onclick="shownext()">►</span></div>
-<script src="showimg.js"></script>
+<script>
+function showimg(url) {
+    var fader=document.querySelector('.imdisplay');
+    fader.current=event.target;
+    fader.style.backgroundImage='url('+url+')';
+    fader.onkeydown=function(e) {
+        console.log(e.keyCode)
+        switch (e.keyCode) {
+            case 27: fader.style.display=''; break;
+            case 37: showprev(); break;
+            case 39: shownext(); break;
+        }
+    }
+    fader.style.display='block';
+    fader.focus();
+}
+function shownext() {
+    var fader=document.querySelector('.imdisplay');
+    if (fader.current.nextElementSibling) {
+        fader.current.nextElementSibling.click();
+        event.stopPropagation();
+    }
+}
+function showprev() {
+    var fader=document.querySelector('.imdisplay');
+    if (fader.current.previousElementSibling) {
+        fader.current.previousElementSibling.click();
+        event.stopPropagation();
+    }
+}
+</script>
 <div>{% for image in site.static_files %}{% if image.path contains 'img/' %}<img class="tanyathumb" src="https://images.weserv.nl/?url={{ site.url }}{{ site.baseurl }}{{ image.path }}&w=256&h=256&output=jpg&q=50" onclick="showimg('{{ site.baseurl }}{{ image.path }}')" /> {% endif %}{% endfor %}</div>
 ## 3D modell
 - [Egy kezdetleges modell KMZ-ben](/3d/Tanya.kmz)
