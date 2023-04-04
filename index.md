@@ -25,3 +25,4 @@ Töröcske, forduló buszmegállótól a piros sáv jelzésen kb. 1,35 km. Az ú
 ## 3D modell
 - [Egy kezdetleges modell KMZ-ben](/3d/Tanya.kmz)
 
+
