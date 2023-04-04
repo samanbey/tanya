@@ -1,5 +1,0 @@
----
-title: "Gede-tanya"
----
-## debug
-{% for image in site.static_files %}{% if image.path contains 'img/' %}<a href="{{ site.baseurl }}{{ image.path }}">{% exiftag image_description, , {{ image.path }} %}</a> {% endif %}{% endfor %}
