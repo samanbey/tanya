@@ -23,22 +23,32 @@
 
         <script>
             // create map object
-            const map = L.map('map_div',{maxZoom: 20}).fitBounds([[46.3015, 17.7654], [46.3075, 17.7860]]);
-            
+            const map = L.map('map_div',{maxZoom: 18}).fitBounds([[46.3015, 17.7654], [46.3075, 17.7860]]);
+            // add google hybrid layer
+			var google_h=L.tileLayer('https://mts1.google.com/vt/lyrs=y@186112443&hl=x-local&src=app&x={x}&y={y}&z={z}&s=Galile', {
+				maxZoom:20,attribution: '© Google'
+			});
             // add OSM tile layer
             const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
             // add OTM tile layer
             const otm = L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            })//.addTo(map);
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                maxZoom: 17
+            });
             // add OSM.HU TT tile layer
             const osmtt = L.tileLayer('https://{s}.tile.openstreetmap.hu/tt/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                maxNativeZoom: 17,
+                maxZoom: 20
             }).addTo(map);
+            // orthophoto from 1965
+            const of1965 = L.tileLayer('{z}/{x}/{y}.png', {
+                maxZoom:18,minZoom:13,attribution: '&copy; fentrol.hu'
+            });
             
-            L.control.layers({'OpenStreetMap':osm,'OpenTopoMap':otm},{'Turistajelzések':osmtt}).addTo(map);
+            L.control.layers({'OpenStreetMap':osm,'OpenTopoMap':otm,'Google hibrid':google_h},{'Ortofotó 1965':of1965,'Turistajelzések':osmtt}).addTo(map);
             L.control.fullscreen().addTo(map);
                         
             var tanyaLayer;
