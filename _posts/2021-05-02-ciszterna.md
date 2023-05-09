@@ -7,13 +7,13 @@ Készítettünk egy ciszternát - innentől kezdve legalább "ipari felhasznál�
 A szerkezet egyelőre nagyon egyszerű: egy gödör, kibélelve tófóliával, befedve egy deszkázattal. Belemegy az esővíz az ereszcsatornából.
 
 Itt készül a gödör:
-![Gödör a ház mellett](/tanya/img/cisz_1_1.jpg)
+![Gödör a ház mellett](/tanya/img/20210502_cisz_1_1.jpg)
 
 Ez lesz a teteje:
-![Deszkázat](/tanya/img/cisz_1_2.jpg)
+![Deszkázat](/tanya/img/20210502_cisz_1_2.jpg)
 
 Itt már ki van bélelve, és bele van vezetve az ereszcsatorna lefolyója:
-![Bélelt gödör a csővel](/tanya/img/cisz_1_3.jpg)
+![Bélelt gödör a csővel](/tanya/img/20210502_cisz_1_3.jpg)
 
 És ilyen lett lefedve:
-![Ciszterna frissen lefedve](/tanya/img/cisz_1_4.jpg)
+![Ciszterna frissen lefedve](/tanya/img/20210502_cisz_1_4.jpg)

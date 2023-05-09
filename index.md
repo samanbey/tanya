@@ -1,7 +1,7 @@
 ---
 title: "Gede-tanya"
 ---
-![A tanyaház képe](/img/tanya.jpg)
+![A tanyaház képe](/img/20210502_tanya.jpg)
 Van egy tanyánk Kaposvár közelében, a Zselicben. 
 Erősen el van hanyagolva, de elhatároztuk, hogy szépen lassan rendbe tesszük.
 
@@ -13,7 +13,7 @@ Itt igyekszem dokumentálni, hogy mikor mit csináltunk.
 {% endfor %}
 
 ## Megközelítés
-Töröcske, forduló buszmegállótól a piros sáv jelzésen kb. 1,35 km. Az út a Zselic egyik leglátványosabb [horhóján](/img/horho.jpg) (löszmélyútján) át vezet.
+Töröcske, forduló buszmegállótól a piros sáv jelzésen kb. 1,35 km. Az út a Zselic egyik leglátványosabb [horhóján](/img/20211224_horho.jpg) (löszmélyútján) át vezet.
 
 ## Térkép
 <iframe src="map" style="width: 100%"></iframe>
@@ -58,7 +58,7 @@ function showprev() {
     }
 }
 </script>
-<div>{% for image in site.static_files | sort: "modified_time" %}{% if image.path contains 'img/' %}<img class="tanyathumb" src="https://images.weserv.nl/?url={{ site.url }}{{ site.baseurl }}{{ image.path }}&w=256&h=256&output=jpg&q=50" onclick="showimg('{{ site.baseurl }}{{ image.path }}')" /> {% endif %}{% endfor %}</div>
+<div>{% for image in site.static_files reversed %}{% if image.path contains 'img/' %}<img class="tanyathumb" src="https://images.weserv.nl/?url={{ site.url }}{{ site.baseurl }}{{ image.path }}&w=256&h=256&output=jpg&q=50" onclick="showimg('{{ site.baseurl }}{{ image.path }}')" /> {% endif %}{% endfor %}</div>
 ## 3D modell
 - [Egy kezdetleges modell KMZ-ben](/3d/Tanya.kmz)
 
