@@ -58,7 +58,7 @@ function showprev() {
     }
 }
 </script>
-<div>{% for image in site.static_files %}{% if image.path contains 'img/' %}<img class="tanyathumb" src="https://images.weserv.nl/?url={{ site.url }}{{ site.baseurl }}{{ image.path }}&w=256&h=256&output=jpg&q=50" onclick="showimg('{{ site.baseurl }}{{ image.path }}')" /> {% endif %}{% endfor %}</div>
+<div>{% for image in site.static_files | sort: "modified_time" %}{% if image.path contains 'img/' %}<img class="tanyathumb" src="https://images.weserv.nl/?url={{ site.url }}{{ site.baseurl }}{{ image.path }}&w=256&h=256&output=jpg&q=50" onclick="showimg('{{ site.baseurl }}{{ image.path }}')" /> {% endif %}{% endfor %}</div>
 ## 3D modell
 - [Egy kezdetleges modell KMZ-ben](/3d/Tanya.kmz)
 
